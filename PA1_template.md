@@ -74,6 +74,7 @@ qplot(new_data_set_daily$totalsteps, binwidth=2000, xlab="total number of steps 
 new_daily_mean = mean(new_data_set_daily[["totalsteps"]])
 new_daily_median = median(new_data_set_daily[["totalsteps"]]) 
 ```
+
 After the replacement, we calculate the mean and median number of steps per day. They are 1.0766 &times; 10<sup>4</sup> and 1.0766 &times; 10<sup>4</sup> respectively. Compared with their values before replacements 1.0766 &times; 10<sup>4</sup> and 10765, the mean increases and the median stay the same.
 
 
@@ -90,4 +91,5 @@ ggplot(data_set_weekdays, aes(x=interval, y=steps)) + facet_grid(weekdays~.) + g
 ```
 
 ![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
+
 There are more activities during the weekends than weekdays. However, there are more early activities  in weekdays, while there are more late activities in weekends.
