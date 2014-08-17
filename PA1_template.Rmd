@@ -28,7 +28,12 @@ The mean and median number of steps taken per day are `r daily_mean` and `r dail
 data_set_interval <- aggregate(data_set$steps, by=data_set["interval"], mean, na.rm=T)
 colnames(data_set_interval) <- c("interval", "meansteps")
 qplot(interval, meansteps, data=data_set_interval, xlab="interval", ylab="averge number of steps") + geom_line() 
+maxsteps_interval <- max(data_set_interval$meansteps)
+max_interval <- data_set_interval[data_set_interval$meansteps==maxsteps_interval, "interval"]
 ```
+
+The 5 minute interval that contains the most number of steps on average is 
+`r max_interval`.
 
 ## Imputing missing values
 

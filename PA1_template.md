@@ -40,6 +40,14 @@ qplot(interval, meansteps, data=data_set_interval, xlab="interval", ylab="averge
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
+```r
+maxsteps_interval <- max(data_set_interval$meansteps)
+max_interval <- data_set_interval[data_set_interval$meansteps==maxsteps_interval, "interval"]
+```
+
+The 5 minute interval that contains the most number of steps on average is 
+835.
+
 ## Imputing missing values
 
 
